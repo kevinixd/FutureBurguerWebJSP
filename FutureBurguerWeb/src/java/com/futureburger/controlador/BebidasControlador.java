@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 public class BebidasControlador extends HttpServlet {
 
     String bebidasFrias = "pags/bebidas/bebidasFrias/bebidasFrias.jsp";
-    String bebidasCalientes = "pags/bebidas/bebidasFrias/bebidasCalientes.jsp";
+    String bebidasCalientes = "pags/bebidas/bebidasCalientes/bebidasCalientes.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -42,19 +42,24 @@ public class BebidasControlador extends HttpServlet {
         String acceso = "";
         //La variable accion depende del href en donde se haga la peiticion
         String action = request.getParameter("accion");
+        
+        PrintWriter out = response.getWriter();
+        out.println(action);
+        
+        
         if (action.equalsIgnoreCase("mostrarBebidasFrias")) {
             acceso = bebidasFrias;
             DaoProductos dao = new DaoProductos();
             ArrayList<Productos> lista = new ArrayList<>();
-            lista = dao.verBebidas();
+            lista = dao.verProductos(1002);
             request.setAttribute("listaBebidasFrias", lista);
         }
-        
+
         if (action.equalsIgnoreCase("mostrarBebidasCalientes")) {
             acceso = bebidasCalientes;
             DaoProductos dao = new DaoProductos();
             ArrayList<Productos> lista = new ArrayList<>();
-            lista = dao.verBebidasDesayuno();
+            lista = dao.verProductos(1003);
             request.setAttribute("listaBebidasCalientes", lista);
         }
         

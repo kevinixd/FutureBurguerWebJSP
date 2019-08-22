@@ -25,7 +25,11 @@
         <%
             //Obtiene el atributo que se le asigno en el controlador de bebidas
             ArrayList<Productos> lista = (ArrayList) request.getAttribute("listaBebidasFrias");
+            int tam = lista.size();
+            int cant=0;
+
         %>
+        
         <!--Contenedor para las bebidas frias-->
         <div class="row container-fluid alto100 animated zoomIn" id="bebidasFrias">
             <div class="col-12 col-sm-12 align-self-center">
@@ -35,28 +39,30 @@
                 <div class="row my-5">
 
                     <%
-                        int elemento = -1;
-                        int cantidadFilas = lista.size() / 3;
-                        for (int i = 0; i < cantidadFilas; i++) {
-                            for (int j = 0; j < 3; j++) {
-                                elemento++;
+                                                
+                        for (Productos elem : lista) {
+                        
+                        if (tam==1) {
+                            cant=12;
+                        }else if(tam==2){
+                            cant=6;
+                        }else{
+                            cant=4;
+                        }
                     %>
-                    <div class="align-items-center col-4 col-sm-4">
+                    <div class="align-items-center col-<%= cant%>">
                         <div class=" cardmain" style="width: 200px;">
                             <a href="Javascript: cargar('#productos', '');">
-                                <img src="img/bebidas/bebidasfrias/<%= lista.get(elemento).getImagen()%>" class="card-img-top main">
+                                <img src="img/bebidas/bebidasfrias/<%= elem.getImagen() %>" class="card-img-top main">
                                 <div class="card-body">
                                     <p class="card-text text-center font-weight-bold text-primary text-decoration-none">
-                                        <%= lista.get(elemento).getProductonombre()%></p>
+                                        <%= elem.getProductonombre() %></p>
                                 </div>
                             </a>
                         </div>
                     </div>
-
-                    <%    }
+                    <%
                         }
-
-
                     %>
                 </div>
 
