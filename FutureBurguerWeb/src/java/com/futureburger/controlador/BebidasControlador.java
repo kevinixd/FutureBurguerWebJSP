@@ -21,45 +21,44 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class BebidasControlador extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    String bebidasFrias = "pags/bebidas/bebidasFrias/bebidasFrias.jsp";
+    String bebidasCalientes = "pags/bebidas/bebidasFrias/bebidasCalientes.jsp";
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-           
+
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
-        DaoProductos dao = new DaoProductos();
-        ArrayList<Productos> lista = new ArrayList<>();
-        lista = dao.verBebidas();
-        for (Productos productos : lista) {
-            System.out.println(productos.toString());
+        
+        //La variable acceso contendra la direccion de lo que se desea mostrar
+        String acceso = "";
+        //La variable accion depende del href en donde se haga la peiticion
+        String action = request.getParameter("accion");
+        if (action.equalsIgnoreCase("mostrarBebidasFrias")) {
+            acceso = bebidasFrias;
+            DaoProductos dao = new DaoProductos();
+            ArrayList<Productos> lista = new ArrayList<>();
+            lista = dao.verBebidas();
+            request.setAttribute("listaBebidasFrias", lista);
         }
-        request.setAttribute("listaProductos", lista);
-        request.getRequestDispatcher("pags/bebidas/bebidasFrias/bebidasFrias.jsp").forward(request, response);
+        
+        if (action.equalsIgnoreCase("mostrarBebidasCalientes")) {
+            acceso = bebidasCalientes;
+            DaoProductos dao = new DaoProductos();
+            ArrayList<Productos> lista = new ArrayList<>();
+            lista = dao.verBebidasDesayuno();
+            request.setAttribute("listaBebidasCalientes", lista);
+        }
+        
+        request.getRequestDispatcher(acceso).forward(request, response);
     }
 
     /**

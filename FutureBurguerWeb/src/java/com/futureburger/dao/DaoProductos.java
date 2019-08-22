@@ -65,7 +65,7 @@ public class DaoProductos implements ProductosInterface {
     public ArrayList<Productos> verBebidas() {
         lista = new ArrayList();
         conexion.abrirConexion();
-        sql = "select * from productos where clasificacion_id=1002";
+        sql = "select * from productos where clasificacion_id=1003";
         try {
             ejecutar = conexion.getCon().prepareStatement(sql);
             resultado = ejecutar.executeQuery();

@@ -45,17 +45,18 @@ body, html {
 .box img{
     width: 35%;
     height: center;
-  }
-  @supports(object-fit: cover){
-      .box img{
+}
+
+@supports(object-fit: cover){
+    .box img{
         height: 35%;
         object-fit: cover;
         object-position: center center;
-      }
-      .doc img{
+    }
+    .doc img{
         width: 200px;
         height: 200px;
-      }
-     
-  }
+    }
+
+}
 
