@@ -6,6 +6,7 @@ body, html {
 }
 
 .mainProductos{
+    margin-top: 2em;
     height: 100%;
     width: 100%;
 }
@@ -31,11 +32,16 @@ body, html {
     padding: auto;
 }
 
-.main {
+.imgProductos {
+    width: 150px;
+    height: 150px;
+    margin-left: 0;
+}
+
+.main{
     width: 200px;
     height: 200px;
 }
-
 
 /**/
 .alto100{
@@ -46,17 +52,10 @@ body, html {
     width: 35%;
     height: center;
 }
-
-@supports(object-fit: cover){
-    .box img{
-        height: 35%;
-        object-fit: cover;
-        object-position: center center;
-    }
     .doc img{
         width: 200px;
         height: 200px;
     }
 
-}
+
 

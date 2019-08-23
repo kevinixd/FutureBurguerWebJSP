@@ -4,9 +4,41 @@
         <servlet-name>BebidasControlador</servlet-name>
         <servlet-class>com.futureburger.controlador.BebidasControlador</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>HamburguesasControlador</servlet-name>
+        <servlet-class>com.futureburger.controlador.HamburguesasControlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DesayunosControlador</servlet-name>
+        <servlet-class>com.futureburger.controlador.DesayunosControlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PostresControlador</servlet-name>
+        <servlet-class>com.futureburger.controlador.PostresControlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SnacksControlador</servlet-name>
+        <servlet-class>com.futureburger.controlador.SnacksControlador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>BebidasControlador</servlet-name>
         <url-pattern>/BebidasControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HamburguesasControlador</servlet-name>
+        <url-pattern>/HamburguesasControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DesayunosControlador</servlet-name>
+        <url-pattern>/DesayunosControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PostresControlador</servlet-name>
+        <url-pattern>/PostresControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SnacksControlador</servlet-name>
+        <url-pattern>/SnacksControlador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

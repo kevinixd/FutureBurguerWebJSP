@@ -1,3 +1,10 @@
+<%-- 
+    Document   : bebidas
+    Created on : Aug 23, 2019, 11:36:15 AM
+    Author     : javam2019
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 

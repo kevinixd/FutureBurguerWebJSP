@@ -17,19 +17,18 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Admin
+ * @author javam2019
  */
-public class BebidasControlador extends HttpServlet {
+public class HamburguesasControlador extends HttpServlet {
 
-    String bebidasFrias = "pags/bebidas/bebidasFrias/bebidasFrias.jsp";
-    String bebidasCalientes = "pags/bebidas/bebidasCalientes/bebidasCalientes.jsp";
-
+    String hamburguesas = "pags/combos/almuerzos.jsp";
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-
+           
         }
     }
 
@@ -46,23 +45,13 @@ public class BebidasControlador extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println(action);
         
-        
-        if (action.equalsIgnoreCase("mostrarBebidasFrias")) {
-            acceso = bebidasFrias;
+        if (action.equalsIgnoreCase("mostrarHamburguesas")) {
+            acceso = hamburguesas;
             DaoProductos dao = new DaoProductos();
             ArrayList<Productos> lista = new ArrayList<>();
-            lista = dao.verProductos(1002);
-            request.setAttribute("listaBebidasFrias", lista);
+            lista = dao.verProductos(1001);
+            request.setAttribute("listaHamburguesas", lista);
         }
-
-        if (action.equalsIgnoreCase("mostrarBebidasCalientes")) {
-            acceso = bebidasCalientes;
-            DaoProductos dao = new DaoProductos();
-            ArrayList<Productos> lista = new ArrayList<>();
-            lista = dao.verProductos(1003);
-            request.setAttribute("listaBebidasCalientes", lista);
-        }
-        
         
         request.getRequestDispatcher(acceso).forward(request, response);
     }

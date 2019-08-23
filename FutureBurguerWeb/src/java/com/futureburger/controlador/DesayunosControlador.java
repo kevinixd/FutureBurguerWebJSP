@@ -17,64 +17,43 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Admin
+ * @author javam2019
  */
-public class BebidasControlador extends HttpServlet {
+public class DesayunosControlador extends HttpServlet {
 
-    String bebidasFrias = "pags/bebidas/bebidasFrias/bebidasFrias.jsp";
-    String bebidasCalientes = "pags/bebidas/bebidasCalientes/bebidasCalientes.jsp";
-
+    String desayunos = "pags/combos/desayunos.jsp";
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-
+            
         }
     }
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
         
-        //La variable acceso contendra la direccion de lo que se desea mostrar
         String acceso = "";
-        //La variable accion depende del href en donde se haga la peiticion
+        
         String action = request.getParameter("accion");
         
-        PrintWriter out = response.getWriter();
-        out.println(action);
-        
-        
-        if (action.equalsIgnoreCase("mostrarBebidasFrias")) {
-            acceso = bebidasFrias;
+        if (action.equalsIgnoreCase("mostrarDesayunos")) {
+            acceso = desayunos;
             DaoProductos dao = new DaoProductos();
             ArrayList<Productos> lista = new ArrayList<>();
-            lista = dao.verProductos(1002);
-            request.setAttribute("listaBebidasFrias", lista);
+            lista = dao.verProductos(1006);
+            request.setAttribute("listaDesayunos", lista);
         }
-
-        if (action.equalsIgnoreCase("mostrarBebidasCalientes")) {
-            acceso = bebidasCalientes;
-            DaoProductos dao = new DaoProductos();
-            ArrayList<Productos> lista = new ArrayList<>();
-            lista = dao.verProductos(1003);
-            request.setAttribute("listaBebidasCalientes", lista);
-        }
-        
         
         request.getRequestDispatcher(acceso).forward(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

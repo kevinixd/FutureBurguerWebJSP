@@ -1,6 +1,6 @@
 <%-- 
-    Document   : bebidasCalientes
-    Created on : Aug 22, 2019, 12:43:30 PM
+    Document   : almuerzos
+    Created on : Aug 23, 2019, 9:51:47 AM
     Author     : javam2019
 --%>
 
@@ -13,26 +13,26 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="X-UA-Compatible" content="Sie=edge">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="../../../css/main.css">
-        <link rel="stylesheet" href="../../../css/prueba.css">
-        <title>Document</title>
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/animate.css">
+        <title>Hamburguesas</title>
     </head>
 
     <body class="border">
         <%
             //Obtiene el atributo que se le asigno en el controlador de bebidas
-            ArrayList<Productos> lista = (ArrayList) request.getAttribute("listaBebidasCalientes");
+            ArrayList<Productos> lista = (ArrayList) request.getAttribute("listaHamburguesas");
             int tam = lista.size();
             int cant = 0;
         %>
+        <!--Contenedor para desayunos-->
+        <div class="row container-fluid alto100 animated zoomIn">
+            <div class="align-self-center col-12" id="combosalmuerzo">
 
-        <!--Contenedor para las bebidas calientes-->
-        <div class="row container-fluid alto100 animated zoomIn" id="bebidasCalientes">
-            <div class="col-12 align-self-center">
-
+                <!--Fila 1-->
                 <div class="row my-5">
                     <%
                         for (Productos elem : lista) {
@@ -45,35 +45,36 @@
                                 cant = 4;
                             }
                     %>
-                    <!--Cafe-->
-                    
-                    <div class="align-items-center col-<%= cant %>">
+                    <!--Combo Almuerzo 1-->
+                    <div class="align-items-center col-<%= cant%>">
                         <div class=" cardmain" style="width: 200px;">
                             <a href="Javascript: cargar('#productos', '');">
-                                <img src="img/bebidas/bebidascalientes/<%= elem.getImagen() %>" class="card-img-top main">
+                                <img src="img/hamburguesas/<%= elem.getImagen()%>" class="card-img-top main">
                                 <div class="card-body">
                                     <p class="card-text text-center font-weight-bold text-primary text-decoration-none">
-                                        <%= elem.getProductonombre() %></p>
+                                        <%= elem.getProductonombre()%></p>
                                 </div>
                             </a>
                         </div>
-                    </div>                    
-                    <!--Cafe-->
+                    </div> 
                     <%    }
                     %>
-
                 </div>
+                    <!--Combo Almuerzo 1-->
 
+                <!--Fin fila 2-->
+                <div class=" text-center">
+                    <a href="prueba.html"><button type="button" class="btn btn-outline-danger btn-lg">Cancelar
+                            Orden</button></a>
+                    <a href="pags/carrito.html">
+                        <button type="button" class="btn btn-outline-primary btn-lg">Pagar Orden</button></a>
+                </div>
+                
             </div>
-
         </div>
 
-        <script src="../../../js/dinamismo.js"></script>
-         <script
-            src="https://code.jquery.com/jquery-1.12.4.min.js"
-            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-        crossorigin="anonymous"></script>
-        
+
+        <script src="../../js/dinamismo.js"></script>
         <script src="../../../js/jquery-1.12.2.min.js"></script>
         <script>
             function cargar(div, destino) {
