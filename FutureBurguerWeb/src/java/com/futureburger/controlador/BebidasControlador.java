@@ -10,6 +10,7 @@ import com.futureburger.modelo.Productos;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +24,9 @@ public class BebidasControlador extends HttpServlet {
 
     String bebidasFrias = "pags/bebidas/bebidasFrias/bebidasFrias.jsp";
     String bebidasCalientes = "pags/bebidas/bebidasCalientes/bebidasCalientes.jsp";
+    
+    String bebidaCafe = "pags/bebidas/bebidasCalientes/bebidacafe.jsp";
+    String bebidaChocolate = "pags/bebidas/bebidasCalientes/bebidachocolate.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -63,8 +67,16 @@ public class BebidasControlador extends HttpServlet {
             request.setAttribute("listaBebidasCalientes", lista);
         }
         
+        if (action.equalsIgnoreCase("mostrarCafe")) {
+            acceso = bebidaCafe;
+        }
         
-        request.getRequestDispatcher(acceso).forward(request, response);
+        if (action.equalsIgnoreCase("mostrarChocolate")) {
+            acceso = bebidaChocolate;
+        }
+        
+        RequestDispatcher vista = request.getRequestDispatcher(acceso);
+        vista.forward(request, response);
     }
 
     /**

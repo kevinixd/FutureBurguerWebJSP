@@ -1,3 +1,10 @@
+<%-- 
+    Document   : bebidacafe
+    Created on : 25/08/2019, 09:04:08 AM
+    Author     : kevin
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -15,29 +22,21 @@
 <body class="border">
     <!--Contenedor para snacks-->
     <div class="row container-fluid border alto100 animated zoomIn">
-
         <div class="align-self-center col-12 col-sm-12" id="bebidacafe">
             <br>
             <br>
-
-
-
             <!--cafe-->
             <div class=" col-sm-12  ">
-
                 <div class="card-text text-center">
                     <div class="doc">
                         <div class="box">
-                            <img src="../../../imgs/Bebidas/Bebidas Calientes/cafe.png"
+                            <img src="img/bebidas/bebidascalientes/2016.png"
                                 class="card-img-top main">
 
                         </div>
                     </div>
                 </div>
-
-
                 <p class="card-text text-center font-weight-bold text-primary text-decoration-none h2">Cafe</p>
-
             </div>
             <br>
             <br>
@@ -45,43 +44,23 @@
             <br>
             <div>
                 <div class=" text-center">
-
-
-
                     <a href="Javascript:cargar('#productos','pags/bebidas/bebidasCalientes/cafep.html');">
                         <button type="button" class="btn btn-outline-success shadow p-3 mb-5 bg-black rounded">
                             Pequeño</button></a>
-
                     <a href="Javascript:cargar('#productos','pags/bebidas/bebidasCalientes/cafem.html');">
                         <button type="button" class="btn btn-outline-warning shadow p-3 mb-5 bg-black rounded">
                             Mediano</button></a>
-
                     <a href="Javascript:cargar('#productos','pags/bebidas/bebidasCalientes/cafeg.html');">
                         <button type="button" class="btn btn-outline-info shadow-lg p-3 mb-5 bg-black rounded">
                             Grande</button></a>
-
                     <br>
                     <br>
-                   
                     <a href="Javascript:cargar('#productos','pags/bebidas/bebidasCalientes/bebidasCalientes.html');"><button
                             type="button" class="btn btn-outline-danger btn-lg">Regresar</button></a>
-
-
                 </div>
-
-
             </div>
         </div>
-        <!--Snacks No. 1-->
     </div>
-
-
-    </div>
-
-
-
-
-
 
     <script src="../../js/dinamismo.js"></script>
     <script src="../../../js/jquery-1.12.2.min.js"></script>

@@ -16,6 +16,12 @@
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/animate.css">
+        <script>
+
+            function cargar(div, destino) {
+                $(div).load(destino);
+            }
+        </script>
 
         <title>FutureBurguer</title>
     </head>
@@ -96,9 +102,6 @@
                     </div>
                 </a>
                 <!--Snacks-->
-
-
-
             </div>
             <!--Fin Contenedor Categorias-->
             <div class="col-9 col-sm-9 border border-primary mainProductos" id="productos">
@@ -113,12 +116,7 @@
             integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
         crossorigin="anonymous"></script>-->
         <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
-        <script>
-
-            function cargar(div, destino) {
-                $(div).load(destino);
-            }
-        </script>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
                 integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
