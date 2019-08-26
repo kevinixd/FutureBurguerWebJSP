@@ -1,9 +1,13 @@
 <%-- 
-    Document   : bebidacalientetamanios
-    Created on : 25/08/2019, 09:25:34 AM
-    Author     : kevin
+    Document   : cafeg
+    Created on : Aug 26, 2019, 9:53:37 AM
+    Author     : javam2019
 --%>
 
+<%@page import="com.futureburger.modelo.Tamanios"%>
+<%@page import="com.futureburger.dao.DaoTamanios"%>
+<%@page import="com.futureburger.dao.DaoView_ProductosTamanios"%>
+<%@page import="com.futureburger.modelo.View_productosTamanios"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -20,11 +24,23 @@
     </head>
 
     <body class="border">
+
+        <%
+            View_productosTamanios producto = new View_productosTamanios();
+            DaoView_ProductosTamanios dao = new DaoView_ProductosTamanios();
+            producto = dao.verProductoDetalle(2015);
+
+            DaoTamanios dao2 = new DaoTamanios();
+            Tamanios tamanios = new Tamanios();
+            String controlador = "";
+        %>
+
         <!--Contenedor para snacks-->
         <div class="row container-fluid border alto100 animated zoomIn">
             <div class="align-self-center col-12 col-sm-12" id="cafeg">
                 <br>
                 <br>
+
                 <div class=" text-center">
                     <button type="button" class="btn btn-outline-danger btn-lg" id="btnDisminuir">-</button>
                     <input type="text" name="txt1" id="txt1" value="1" class="card-text text-center"> </input>
@@ -37,8 +53,7 @@
                     <div class="card-text text-center">
                         <div class="doc">
                             <div class="box">
-                                <img src="../../../imgs/Bebidas/Bebidas Calientes/cafe.png"
-                                     class="card-img-top main">
+                                <img src="img/bebidas/bebidascalientes/<%= producto.getProductoImgView()%>" class="card-img-top main">
                             </div>
                         </div>
                     </div>
@@ -47,39 +62,34 @@
 
                 <div>
                     <br>
-                    <p class="card-text text-center ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eos
-                        molestiae ipsam facere aut,
-                        <br>sunt provident incidunt sint molestias esse! Quisquam numquam est fuga, eos consequuntur hic
-                        <br>rem molestiae cum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eos molestiae
+                    <p class="card-text text-center "><%= producto.getProductoDescpView() %>
                     </p>
-                    <p class="card-text text-center h3"><br>Precio: Q12.00</p>
+                    <p class="card-text text-center h3"><br>Precio: <%= producto.getPrecioView() %></p>
                     <br>
                     <br>
                     <div class=" text-center">
-                        <a href="Javascript:cargar('#productos','pags/bebidas/bebidasCalientes/bebidacafe.html');">
+                        <a href="Javascript:cargar('#productos','pags/bebidas/bebidasCalientes/bebidacafe.jsp');">
                             <button type="button" class="btn btn-outline-danger btn-lg">Regresar A Bebida Cafe!</button></a>
-                        <a href="Javascript:cargar('#productos','pags/bebidas/bebidasCalientes/bebidasCalientes.html');">
+                        <a href="Javascript:cargar('#productos','pags/bebidas/bebidasCalientes/bebidasCalientes.jsp');">
                             <button type="button" class="btn btn-outline-primary btn-lg">Agregar A Carito!</button></a>
                     </div>
                 </div>
-
             </div>
         </div>
 
-
-<script src="../../js/dinamismo.js"></script>
-<script src="../../../js/jquery-1.12.2.min.js"></script>
-<script>
-    function cargar(div, destino) {
-        $(div).load(destino);
-    }
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-crossorigin="anonymous"></script>
-</body>
+        <script src="../../js/dinamismo.js"></script>
+        <script src="../../../js/jquery-1.12.2.min.js"></script>
+        <script>
+            function cargar(div, destino) {
+                $(div).load(destino);
+            }
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    </body>
 
 </html>

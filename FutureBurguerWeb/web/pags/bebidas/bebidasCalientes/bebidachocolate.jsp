@@ -32,7 +32,7 @@
                 <div class="card-text text-center">
                     <div class="doc">
                         <div class="box">
-                            <img src="img/bebidas/bebidascalientes/2015.png"
+                            <img src="img/bebidas/bebidascalientes/2016.png"
                                 class="card-img-top main">
                         </div>
                     </div>

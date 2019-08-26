@@ -1,3 +1,10 @@
+<%-- 
+    Document   : combo4
+    Created on : Aug 26, 2019, 12:33:51 PM
+    Author     : javam2019
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -13,7 +20,7 @@
 </head>
 
 <body class="border">
-    <!--Contenedor para snacks-->
+    <!--Contenedor para hamburguesa4-->
     <div class="row container-fluid border alto100 animated zoomIn">
 
         <div class="align-self-center col-12 col-sm-12" id="combo1">
@@ -25,28 +32,28 @@
                 <div class="row col-12 col-sm-12 align-self-center">
 
                     <!--Bebidas Calientes-->
-                    <div class="align-items-center col-6 col-sm-6" id="combo3">
+                    <div class="align-items-center col-6 col-sm-6" id="combo4">
 
                         <div class=" cardmain" style="width: 200px;">
                             <img src="../../../imgs/combos/Almuerzos.png" class="card-img-top main">
                             <div class="card-body">
                                 <p class="card-text text-center font-weight-bold text-primary text-decoration-none">
-                                    Combo 3</p>
+                                    Combo 4</p>
                             </div>
                             <div class="text-center">
                                 <a
-                                    href="Javascript:cargar('#productos','pags/combos/combosalmuerzo/combos/tamaños/mediano3.html');">
+                                    href="Javascript:cargar('#productos','pags/combos/combosalmuerzo/combos/tamaños/mediano4.html');">
                                     <button type="button"
                                         class="btn btn-outline-success shadow p-3 mb-2 bg-black rounded">
                                         Mediano</button></a>
 
                                 <a
-                                    href="Javascript:cargar('#productos','pags/combos/combosalmuerzo/combos/tamaños/grande3.html');">
+                                    href="Javascript:cargar('#productos','pags/combos/combosalmuerzo/combos/tamaños/grande4.html');">
                                     <button type="button"
                                         class="btn btn-outline-warning shadow p-3 mb-2 bg-black rounded">
                                         Grande</button></a>
                                 <a
-                                    href="Javascript:cargar('#productos','pags/combos/combosalmuerzo/combos/tamaños/extragrande3.html');">
+                                    href="Javascript:cargar('#productos','pags/combos/combosalmuerzo/combos/tamaños/extragrande4.html');">
                                     <button type="button"
                                         class="btn btn-outline-info shadow-lg p-3 mb-2 bg-black rounded">
                                         Extra
@@ -58,12 +65,12 @@
                     <!--Bebidas Calientes-->
 
                     <!--Sodas-->
-                    <div class="align-items-center col-6 col-sm-6" id="hamburguesa3">
+                    <div class="align-items-center col-6 col-sm-6" id="hamburguesa4">
                         <div class=" cardmain" style="width: 200px;">
                             <img src="../../../imgs/combos/Almuerzos.png" class="card-img-top main">
                             <div class="card-body">
                                 <p class="card-text text-center font-weight-bold text-primary text-decoration-none">
-                                    hamburguesa 3 </p>
+                                    hamburguesa 4 </p>
                             </div>
                         </div>
 
@@ -90,12 +97,8 @@
     </div>
 
 
-    <!--Snacks No. 1-->
 
-
-
-
-
+    <!--combo4-->
 
 
     <script src="../../js/dinamismo.js"></script>

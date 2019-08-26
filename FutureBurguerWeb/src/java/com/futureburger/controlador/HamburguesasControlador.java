@@ -10,6 +10,7 @@ import com.futureburger.modelo.Productos;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,6 +23,11 @@ import javax.servlet.http.HttpServletResponse;
 public class HamburguesasControlador extends HttpServlet {
 
     String hamburguesas = "pags/combos/almuerzos.jsp";
+    
+    String combo1 = "pags/combos/combosalmuerzo/combos/combo1.html";
+    String combo2 = "pags/combos/combosalmuerzo/combos/combo2.html";
+    String combo3 = "pags/combos/combosalmuerzo/combos/combo3.html";
+    String combo4 = "pags/combos/combosalmuerzo/combos/combo4.html";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -53,7 +59,21 @@ public class HamburguesasControlador extends HttpServlet {
             request.setAttribute("listaHamburguesas", lista);
         }
         
-        request.getRequestDispatcher(acceso).forward(request, response);
+        if (action.equalsIgnoreCase("mostrarCombo1")) {
+            acceso = combo1;
+        }
+        if (action.equalsIgnoreCase("mostrarCombo2")) {
+            acceso = combo2;
+        }
+        if (action.equalsIgnoreCase("mostrarCombo3")) {
+            acceso = combo3;
+        }
+        if (action.equalsIgnoreCase("mostrarCombo4")) {
+            acceso = combo4;
+        }
+        
+        RequestDispatcher vista = request.getRequestDispatcher(acceso);
+        vista.forward(request, response);
     }
 
     /**

@@ -27,6 +27,7 @@
             ArrayList<Productos> lista = (ArrayList) request.getAttribute("listaHamburguesas");
             int tam = lista.size();
             int cant = 0;
+            String controlador = "";
         %>
         <!--Contenedor para desayunos-->
         <div class="row container-fluid alto100 animated zoomIn">
@@ -46,9 +47,21 @@
                             }
                     %>
                     <!--Combo Almuerzo 1-->
+                    <%
+                        if (elem.getProducto_id() == 2001) {
+                            controlador = "HamburguesasControlador?accion=mostrarCombo1";
+                        } else if (elem.getProducto_id() == 2002) {
+                            controlador = "HamburguesasControlador?accion=mostrarCombo2";
+                        } else if (elem.getProducto_id() == 2003) {
+                            controlador = "HamburguesasControlador?accion=mostrarCombo3";
+                        } else if (elem.getProducto_id() == 2004) {
+                            controlador = "HamburguesasControlador?accion=mostrarCombo4";
+                        }
+                        
+                    %>
                     <div class="align-items-center col-<%= cant%>">
                         <div class=" cardmain" style="width: 200px;">
-                            <a href="Javascript: cargar('#productos', '');">
+                            <a href="Javascript: cargar('#productos', '<%= controlador %>');">
                                 <img src="img/hamburguesas/<%= elem.getImagen()%>" class="card-img-top main">
                                 <div class="card-body">
                                     <p class="card-text text-center font-weight-bold text-primary text-decoration-none">

@@ -1,3 +1,10 @@
+<%-- 
+    Document   : combo2
+    Created on : Aug 26, 2019, 12:32:57 PM
+    Author     : javam2019
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -25,28 +32,28 @@
                 <div class="row col-12 col-sm-12 align-self-center">
 
                     <!--Bebidas Calientes-->
-                    <div class="align-items-center col-6 col-sm-6" id="combo1">
+                    <div class="align-items-center col-6 col-sm-6" id="combo2">
 
                         <div class=" cardmain" style="width: 200px;">
                             <img src="../../../imgs/combos/Almuerzos.png" class="card-img-top main">
                             <div class="card-body">
                                 <p class="card-text text-center font-weight-bold text-primary text-decoration-none">
-                                    Combo 1</p>
+                                    Combo 2</p>
                             </div>
                             <div class="text-center">
                                 <a
-                                    href="Javascript:cargar('#productos','pags/combos/combosalmuerzo/combos/tamaños/mediano1.html');">
+                                    href="Javascript:cargar('#productos','pags/combos/combosalmuerzo/combos/tamaños/mediano2.html');">
                                     <button type="button"
                                         class="btn btn-outline-success shadow p-3 mb-2 bg-black rounded">
                                         Mediano</button></a>
 
                                 <a
-                                    href="Javascript:cargar('#productos','pags/combos/combosalmuerzo/combos/tamaños/grande1.html');">
+                                    href="Javascript:cargar('#productos','pags/combos/combosalmuerzo/combos/tamaños/grande2.html');">
                                     <button type="button"
                                         class="btn btn-outline-warning shadow p-3 mb-2 bg-black rounded">
                                         Grande</button></a>
                                 <a
-                                    href="Javascript:cargar('#productos','pags/combos/combosalmuerzo/combos/tamaños/extragrande1.html');">
+                                    href="Javascript:cargar('#productos','pags/combos/combosalmuerzo/combos/tamaños/extragrande2.html');">
                                     <button type="button"
                                         class="btn btn-outline-info shadow-lg p-3 mb-2 bg-black rounded">
                                         Extra
@@ -58,12 +65,12 @@
                     <!--Bebidas Calientes-->
 
                     <!--Sodas-->
-                    <div class="align-items-center col-6 col-sm-6" id="BbdCalientes">
+                    <div class="align-items-center col-6 col-sm-6" id="hamburguesa2">
                         <div class=" cardmain" style="width: 200px;">
                             <img src="../../../imgs/combos/Almuerzos.png" class="card-img-top main">
                             <div class="card-body">
                                 <p class="card-text text-center font-weight-bold text-primary text-decoration-none">
-                                    hamburguesa 1 </p>
+                                    hamburguesa 2 </p>
                             </div>
                         </div>
 
@@ -78,7 +85,9 @@
                 <br>
                 <br>
                 <br>
-               
+                <br>
+                <br>
+                <br>
 
 
                 <a href="Javascript:cargar('#productos','pags/combos/almuerzos.html');"><button type="button"
@@ -86,16 +95,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-    <!--Snacks No. 1-->
-
-
-
-
-
 
 
     <script src="../../js/dinamismo.js"></script>

@@ -27,6 +27,9 @@ public class BebidasControlador extends HttpServlet {
     
     String bebidaCafe = "pags/bebidas/bebidasCalientes/bebidacafe.jsp";
     String bebidaChocolate = "pags/bebidas/bebidasCalientes/bebidachocolate.jsp";
+    
+    String bebidaCafeG = "pags/bebidas/bebidasCalientes/cafeg.jsp";
+    String bebidaCafeM = "pags/bebidas/bebidasCalientes/cafem.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -73,6 +76,13 @@ public class BebidasControlador extends HttpServlet {
         
         if (action.equalsIgnoreCase("mostrarChocolate")) {
             acceso = bebidaChocolate;
+        }
+        
+        if (action.equalsIgnoreCase("mostrarCafeG")) {
+            acceso = bebidaCafeG;
+        }
+        if (action.equalsIgnoreCase("mostrarCafeM")) {
+            acceso = bebidaCafeM;
         }
         
         RequestDispatcher vista = request.getRequestDispatcher(acceso);
