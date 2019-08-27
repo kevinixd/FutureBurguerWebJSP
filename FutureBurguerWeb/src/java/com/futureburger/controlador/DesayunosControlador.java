@@ -21,7 +21,13 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class DesayunosControlador extends HttpServlet {
 
+    //Estas variables contienen la direccion de los formularios a llamar en el metodo doGet
     String desayunos = "pags/combos/desayunos.jsp";
+    
+    String combo1 = "pags/combos/combosdesayuno/combos/combo1.html";
+    String combo2 = "pags/combos/combosdesayuno/combos/combo2.html";
+    String combo3 = "pags/combos/combosdesayuno/combos/combo3.html";
+    String combo4 = "pags/combos/combosdesayuno/combos/combo4.html";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -48,6 +54,19 @@ public class DesayunosControlador extends HttpServlet {
             ArrayList<Productos> lista = new ArrayList<>();
             lista = dao.verProductos(1006);
             request.setAttribute("listaDesayunos", lista);
+        }
+        
+        if (action.equalsIgnoreCase("mostrarCombo1")) {
+            acceso = combo1;
+        }
+        if (action.equalsIgnoreCase("mostrarCombo2")) {
+            acceso = combo2;
+        }
+        if (action.equalsIgnoreCase("mostrarCombo3")) {
+            acceso = combo3;
+        }
+        if (action.equalsIgnoreCase("mostrarCombo4")) {
+            acceso = combo4;
         }
         
         request.getRequestDispatcher(acceso).forward(request, response);

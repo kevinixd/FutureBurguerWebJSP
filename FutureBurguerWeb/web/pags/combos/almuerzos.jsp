@@ -57,7 +57,6 @@
                         } else if (elem.getProducto_id() == 2004) {
                             controlador = "HamburguesasControlador?accion=mostrarCombo4";
                         }
-                        
                     %>
                     <div class="align-items-center col-<%= cant%>">
                         <div class=" cardmain" style="width: 200px;">

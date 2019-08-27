@@ -22,6 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class BebidasControlador extends HttpServlet {
 
+    //Estas variables contienen la direccion de los formularios a llamar en el metodo doGet
     String bebidasFrias = "pags/bebidas/bebidasFrias/bebidasFrias.jsp";
     String bebidasCalientes = "pags/bebidas/bebidasCalientes/bebidasCalientes.jsp";
     

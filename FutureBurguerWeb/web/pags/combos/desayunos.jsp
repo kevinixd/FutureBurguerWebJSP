@@ -26,13 +26,10 @@
             ArrayList<Productos> lista = (ArrayList) request.getAttribute("listaDesayunos");
             int tam = lista.size();
             int cant = 0;
+            String controlador = "";
         %>
-        <!--Contenedor para desayunos-->
         <div class="row container-fluid alto100 animated zoomIn">
             <div class="align-self-center col-12" id="combosdesayuno">
-
-
-                <!--Fila 1-->
                 <div class="row my-5">
                     <%
                         for (Productos elem : lista) {
@@ -44,10 +41,22 @@
                                 cant = 4;
                             }
                     %>
-                    <!--Combo Desayuno 1-->
+                    
+                    <%
+                        if (elem.getProducto_id() == 2026) {
+                            controlador = "DesayunosControlador?accion=mostrarCombo1";
+                        } else if (elem.getProducto_id() == 2027) {
+                            controlador = "DesayunosControlador?accion=mostrarCombo2";
+                        } else if (elem.getProducto_id() == 2028) {
+                            controlador = "DesayunosControlador?accion=mostrarCombo3";
+                        } else if (elem.getProducto_id() == 2029) {
+                            controlador = "DesayunosControlador?accion=mostrarCombo4";
+                        }
+                    %>
+
                     <div class="align-items-center col-<%= cant%>">
                         <div class=" cardmain" style="width: 200px;">
-                            <a href="Javascript:cargar('#productos','');">
+                            <a href="Javascript:cargar('#productos','<%= controlador %>');">
                                 <img src="img/desayunos/<%= elem.getImagen() %>" class="card-img-top main">
                                 <div class="card-body">
                                     <p class="card-text text-center font-weight-bold text-primary text-decoration-none">
@@ -56,12 +65,12 @@
                             </a>
                         </div>
                     </div>
-                    <!--Combo Desayuno 1-->
+
                     <%
                         }
                     %>
                 </div>
-                <!--Fin fila 2-->
+
                 <div class=" text-center">
 
                     <a href="prueba.html"><button type="button" class="btn btn-outline-danger btn-lg">Cancelar
@@ -69,9 +78,7 @@
                     <a href="pags/carrito.html">
                         <button type="button" class="btn btn-outline-primary btn-lg">Pagar Orden</button></a>
                 </div>
-
             </div>
-
         </div>
 
 

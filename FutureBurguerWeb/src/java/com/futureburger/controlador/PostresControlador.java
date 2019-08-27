@@ -21,6 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class PostresControlador extends HttpServlet {
 
+    //Esta variable contiene la direccion de los formularios a llamar en el metodo doGet
     String postres = "pags/postres/postres.jsp";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
