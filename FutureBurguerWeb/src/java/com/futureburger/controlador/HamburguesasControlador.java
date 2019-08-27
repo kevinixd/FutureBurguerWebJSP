@@ -22,12 +22,13 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class HamburguesasControlador extends HttpServlet {
 
+    //Estas variables contienen la direccion de los formularios a llamar en el metodo doGet
     String hamburguesas = "pags/combos/almuerzos.jsp";
     
-    String combo1 = "pags/combos/combosalmuerzo/combos/combo1.html";
-    String combo2 = "pags/combos/combosalmuerzo/combos/combo2.html";
-    String combo3 = "pags/combos/combosalmuerzo/combos/combo3.html";
-    String combo4 = "pags/combos/combosalmuerzo/combos/combo4.html";
+    String combo1 = "pags/combos/combosalmuerzo/combos/combo1.jsp";
+    String combo2 = "pags/combos/combosalmuerzo/combos/combo2.jsp";
+    String combo3 = "pags/combos/combosalmuerzo/combos/combo3.jsp";
+    String combo4 = "pags/combos/combosalmuerzo/combos/combo4.jsp";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -47,10 +48,7 @@ public class HamburguesasControlador extends HttpServlet {
         String acceso = "";
         //La variable accion depende del href en donde se haga la peiticion
         String action = request.getParameter("accion");
-        
-        PrintWriter out = response.getWriter();
-        out.println(action);
-        
+
         if (action.equalsIgnoreCase("mostrarHamburguesas")) {
             acceso = hamburguesas;
             DaoProductos dao = new DaoProductos();

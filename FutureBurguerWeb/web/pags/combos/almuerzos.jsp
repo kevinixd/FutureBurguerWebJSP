@@ -74,15 +74,12 @@
                     %>
                 </div>
                     <!--Combo Almuerzo 1-->
-
-                <!--Fin fila 2-->
                 <div class=" text-center">
                     <a href="prueba.html"><button type="button" class="btn btn-outline-danger btn-lg">Cancelar
                             Orden</button></a>
                     <a href="pags/carrito.html">
                         <button type="button" class="btn btn-outline-primary btn-lg">Pagar Orden</button></a>
                 </div>
-                
             </div>
         </div>
 

@@ -24,31 +24,19 @@
     </head>
 
     <body class="border">
-        <%
-            View_productosTamanios producto = new View_productosTamanios();
-            DaoView_ProductosTamanios dao = new DaoView_ProductosTamanios();
-            producto = dao.verProductoDetalle(2015);
-
-            DaoTamanios dao2 = new DaoTamanios();
-            Tamanios tamanios = new Tamanios();
-            String controlador = "";
-        %>
-        <!--Contenedor para snacks-->
         <div class="row container-fluid border alto100 animated zoomIn">
             <div class="align-self-center col-12 col-sm-12" id="combo1">
                 <br>
                 <br>
                 <br>
-                <!--Snacks No. 1-->
                 <div class="row col-12 col-sm-12 align-self-center">
                     <div class="row col-12 col-sm-12 align-self-center">
-                        <!--Bebidas Calientes-->
                         <div class="align-items-center col-6 col-sm-6" id="combo1">
                             <div class=" cardmain" style="width: 200px;">
-                                <img src="img/combos/Almuerzos.png" class="card-img-top main">
+                                <img src="img/combos/10.png" class="card-img-top main">
                                 <div class="card-body">
                                     <p class="card-text text-center font-weight-bold text-primary text-decoration-none">
-                                        Combo 1</p>
+                                        Jupiter's Hunger</p>
                                 </div>
                                 <div class="text-center">
                                     <a
@@ -58,39 +46,27 @@
                                             Mediano</button></a>
                                 </div>
                             </div>
-
                         </div>
-                        <!--Bebidas Calientes-->
 
-                        <!--Sodas-->
                         <div class="align-items-center col-6 col-sm-6" id="BbdCalientes">
                             <div class=" cardmain" style="width: 200px;">
-                                <img src="../../../imgs/combos/Almuerzos.png" class="card-img-top main">
+                                <img src="img/hamburguesas/2001.png" class="card-img-top main">
                                 <div class="card-body">
                                     <p class="card-text text-center font-weight-bold text-primary text-decoration-none">
-                                        hamburguesa 1 </p>
+                                        Romana Barbacoa</p>
                                 </div>
                             </div>
-
                         </div>
-                        <!--Sodas-->
-
                     </div>
-                    <!--Bebidas Calientes-->
-
                 </div>
                 <div class="text-center">
                     <br>
                     <br>
                     <br>
-
-                    <a href="Javascript:cargar('#productos','pags/combos/almuerzos.html');"><button type="button"
-                                                                                                    class="btn btn-outline-danger btn-lg">Regresar</button></a>
+                    <a href="Javascript:cargar('#productos','pags/combos/almuerzos.jsp');"><button type="button" class="btn btn-outline-danger btn-lg">Regresar</button></a>
                 </div>
             </div>
-        </div>
-
-
+        </div> 
         <script src="../../js/dinamismo.js"></script>
         <script src="../../../js/jquery-1.12.2.min.js"></script>
         <script>

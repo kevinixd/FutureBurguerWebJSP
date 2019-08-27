@@ -16,6 +16,9 @@
         <link rel="stylesheet" href="../../css/main.css">
         <link rel="stylesheet" href="../../css/animate.css">
         <script src="../../js/jquery-1.12.2.min.js"></script>
+        <!--
+        Script que carga los formularios dentro de un contenedor
+        -->
         <script>
             function cargar(div, destino) {
                 $(div).load(destino);

@@ -16,8 +16,10 @@
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/animate.css">
+        <!--
+        Script que carga los formularios dentro de un contenedor
+        -->
         <script>
-
             function cargar(div, destino) {
                 $(div).load(destino);
             }

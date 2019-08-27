@@ -39,9 +39,8 @@
                 <div class="row my-5">
 
                     <%
-                                                
+                        //Obtiene los productos de la lista                        
                         for (Productos elem : lista) {
-                        
                         if (tam==1) {
                             cant=12;
                         }else if(tam==2){
@@ -65,11 +64,6 @@
                         }
                     %>
                 </div>
-
-
-
-
-                <script src="../../../js/dinamismo.js"></script>
                 <script src="../../../js/jquery-1.12.2.min.js"></script>
                 <script>
                     function cargar(div, destino) {
